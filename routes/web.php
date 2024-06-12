@@ -33,3 +33,17 @@ Route::get('/mostrar-candidato/{id_do_candidato}', function ($id_do_candidato) {
     echo "<br />";
     echo $candidato->telefone;
 });
+
+Route::get('/editar-candidato/{id_do_candidato}', function ($id_do_candidato) {
+    $candidato = Candidato::findOrFail($id_do_candidato);
+    return view('editar_candidato', ['candidato' => $candidato]);
+});
+
+Route::put('/atualizar-candidato/{id_do_candidato}', function (Request $informacoes, $id_do_candidato) {
+    $candidato = Candidato::findOrFail($id_do_candidato);
+    $candidato->nome = $informacoes->nome_candidato;
+    $candidato->telefone = $informacoes->telefone_candidato;
+    $candidato->save();
+    echo "Candidato Atualizado com Sucesso!";
+
+    });
