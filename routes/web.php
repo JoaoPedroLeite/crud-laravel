@@ -47,3 +47,9 @@ Route::put('/atualizar-candidato/{id_do_candidato}', function (Request $informac
     echo "Candidato Atualizado com Sucesso!";
 
     });
+
+Route::get('/excluir-candidato/{id_do_candidato}', function ($id_do_candidato) {
+    $candidato = Candidato::findOrFail($id_do_candidato);
+    $candidato->delete();
+    echo "Candidato excluirdo com Sucesso!";
+});
