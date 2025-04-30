@@ -2,7 +2,7 @@
 
 Este é um projeto feito em Laravel 10.48.7 , se trata de um simples de CRUD (Create, Read, Update, Delete) que tem a função de cadastro de candidatos, onde é possivel cadastrar nome e telefone do candidato.
 
-Este projeto tem intuido de aprender mais sobre o FrameWorl Laravel.
+Este projeto tem intuido de aprender mais sobre o FrameWork Laravel.
 
 
 ## Requisitos
